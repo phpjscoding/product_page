@@ -1,0 +1,267 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+/* reset */
+
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+
+	margin:0;
+}
+
+/*----------------form ---------------------*/
+
+
+:root {
+  --color-gray: #737888;
+  --color-lighter-gray: #e3e5ed;
+  --color-light-gray: #f7f7fa;
+  --header-h:3rem;
+}
+
+body{
+	background: #5433FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #A5FECB, #20BDFF, #5433FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #A5FECB, #20BDFF, #5433FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+scroll-behavior: smooth;
+
+
+
+}
+
+
+
+
+.m-header{
+	display: flex;
+	height: var(--header-h);
+	
+	justify-content: space-around;
+	align-items: center;
+	box-shadow: 3px 0px 9px rgba(0,0,0,.2);
+}
+.hero{
+	display: flex;
+	height: calc(100vh - var(--header-h));
+
+}
+
+.hero__form{
+	
+	flex: 1 0 50%;
+	padding:2em;
+	height: 100%;
+	overflow: hidden;
+} 
+
+
+legend{
+	color: #fff;
+}
+.hero__form input:not([type=submit]),
+select{
+
+border:.1px solid #ccc;
+
+height: 2.3rem;
+outline: none;
+transition: all 0.30s ease-in-out;
+margin-bottom:1em;
+width: 100%;
+
+border-radius: 5px;
+  box-shadow: inset 1px 2px 6px #007991;
+  border:none;
+
+
+}
+
+input::placeholder{
+	font-size: 1rem
+}
+ 
+input:not([type=submit]):focus,
+ select:focus {
+  box-shadow: none;
+  
+  border: none;
+  font-size: 1.2rem;
+}
+
+input[name="address"]{
+	
+}
+select{
+	    
+    background: #fff
+
+}
+
+.hero__product{
+	
+	flex: 1 0 50%;
+
+}
+
+fieldset{
+	    border: none;
+    border-top: .1px solid #eee;
+    display: flex;
+    flex-direction: column;
+	
+}
+
+input[type="submit"]{
+	width: 80%;
+	height: 2.5rem;
+	border: none;
+	background-color: #5433FF;
+	color: #fff;
+	font-size: 1.2rem;
+	transform: translate(55px);
+	font-weight: 600;
+	cursor: pointer;
+	transition: all .3s ease-in-out;
+}
+input[type="submit"]:hover,
+input[type="submit"]:focus{
+	background-color: #412abd;
+	outline: none;
+}
+
+.hero__slide{
+	position: relative;
+}
+.hero__slide img{
+	max-width: 300px;
+	max-height: 400px;
+
+	
+	
+}
+.slide__img {
+	position: absolute;
+	visibility: hidden;
+	animation:animateimg1 12s calc(1s * var(--i)) ease-in-out infinite;
+
+}
+
+@keyframes animateimg1{
+	0%{
+		opacity: 0;
+		visibility: visible;
+		transform: scale(.7);
+		
+	}
+	33%{
+		opacity:1;
+		transform: scale(1) rotateY(-10deg);
+		visibility: hidden;
+
+
+	};
+}
+
+.w-30{
+	width: 30%;
+}
+
+.product__info{
+	display: flex;
+	background: #5433FF;
+	padding:2em 0;  
+
+
+
+}
+
+.product__info--text{
+	    max-width: 400px;
+    margin:0em auto;
+}
+
+.product__info--img img{
+	max-width: 400px;
+}
+.product__title{
+	font-size: 2.1em;
+	color: #fff;
+	letter-spacing: 2px;
+	margin: 2em 0;
+}
+
+.product__description{
+	line-height: 1.5;
+    font-weight: 600;
+    color: #eee;
+}
+
+.product__bullets{
+	padding-top:1em;
+	color: #fff;
+}
+
+.testimonialas__title{
+text-align: center;
+font-size: 2em;
+margin:2em 0;
+color: #fff;
+}
+.testimonialas__cards{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.testimonialas__card{
+	border:.3px solid #ccc;
+	max-width: 12rem;
+	height: 16rem;
+	
+	margin:1em;
+	border: .4rem;
+}
+.testimonialas__card--header img{
+	max-width: 100%;
+	border-radius: 50%;
+	
+
+}
+.testimonialas__card--header{
+	width: 6rem;
+	height: 6rem;
+	border-radius: 50%;
+	margin: 0 auto;
+	margin-top:-3em;
+
+}
+
+.testimonialas__card--body{
+	padding-top: 2em;
+	color: #fff;
+	font-weight: 600;
+}
+
+.testimonialas__card--body b{
+	    opacity: .5;
+    font-size: 2em;
+}
+
+/**/
+.footer{
+	background-color: rgba(0,0,0,.4);
+	height: 4rem;
+	padding: .5rem;
+}
+.footer a{
+	text-decoration: none;
+	color: #fff
+}
+.footer ul{
+	align-items: center;
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+}
